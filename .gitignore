@@ -1,0 +1,6 @@
+.cproject
+.project
+.tmp_versions
+*.o
+*.ko
+*.cmd
