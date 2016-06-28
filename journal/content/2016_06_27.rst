@@ -9,19 +9,19 @@ April 30, 2016
 
 This article covers how the Linux USB subsystem works. The source for the mt7601u includes functions for manipulating URBs (USB request blocks).
 
-.. An Overview of Linux USB: http://www.linuxjournal.com/article/8093
+.. _An Overview of Linux USB: http://www.linuxjournal.com/article/8093
 
 These articles cover the basics of writing a driver and includes source for a skeleton driver.
 
-.. How to Write a Linux USB Device Driver: http://www.linuxjournal.com/article/4786
-.. Writing a Simple USB Driver: http://www.linuxjournal.com/article/7353
+.. _How to Write a Linux USB Device Driver: http://www.linuxjournal.com/article/4786
+.. _Writing a Simple USB Driver: http://www.linuxjournal.com/article/7353
 
 This article teaches by counterexample.
 
-.. Drving Me Nuts - Things You Never Should Do in the Kernel: http://www.linuxjournal.com/article/8110
+.. _Driving Me Nuts - Things You Never Should Do in the Kernel: http://www.linuxjournal.com/article/8110
 
 This is informative. Not really sure how to apply any of it yet.
 
-.. User Mode Drivers: http://www.linuxjournal.com/article/5442
+.. _User Mode Drivers: http://www.linuxjournal.com/article/5442
 
 
