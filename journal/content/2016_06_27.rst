@@ -1,0 +1,27 @@
+April 30, 2016
+##############
+
+:date: 2016-06-27 20:57
+:category: mt7610u
+:slug: useful-beginning-sites
+:authors: Tristian Celestin
+:summary: Sites to help me get started
+
+This article covers how the Linux USB subsystem works. The source for the mt7601u includes functions for manipulating URBs (USB request blocks).
+
+.. An Overview of Linux USB: http://www.linuxjournal.com/article/8093
+
+These articles cover the basics of writing a driver and includes source for a skeleton driver.
+
+.. How to Write a Linux USB Device Driver: http://www.linuxjournal.com/article/4786
+.. Writing a Simple USB Driver: http://www.linuxjournal.com/article/7353
+
+This article teaches by counterexample.
+
+.. Drving Me Nuts - Things You Never Should Do in the Kernel: http://www.linuxjournal.com/article/8110
+
+This is informative. Not really sure how to apply any of it yet.
+
+.. User Mode Drivers: http://www.linuxjournal.com/article/5442
+
+
