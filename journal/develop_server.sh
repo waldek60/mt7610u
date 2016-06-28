@@ -3,7 +3,7 @@
 # This section should match your Makefile
 ##
 PY=${PY:-python3}
-PELICAN=${PELICAN:-pelican}
+PELICAN=${PELICAN:-py3-pelican}
 PELICANOPTS=
 
 BASEDIR=$(pwd)
