@@ -15,12 +15,41 @@
                 <h1><a href="https://tristianc.github.io/mt7610u/">mt7610u Project Log </a></h1>
                 <nav><ul>
                     <li><a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a></li>
+                    <li><a href="https://tristianc.github.io/mt7610u/category/pelican.html">pelican</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html">April 30, 2016</a></h1>
+                    <h1 class="entry-title"><a href="https://tristianc.github.io/mt7610u/path-issues-with-pellican.html">Path Issues With Pelican</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-07-02T23:22:00-04:00">
+                Published: Sat 02 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://tristianc.github.io/mt7610u/author/tristian-celestin.html">Tristian Celestin</a>
+        </address>
+<p>In <a href="https://tristianc.github.io/mt7610u/category/pelican.html">pelican</a>.</p>
+
+</footer><!-- /.post-info --><p>I was repeatedly publishing this log using Pelican, but the page would never get styled correctly. Developer tools revealed that the path to <tt class="docutils literal">main.css</tt> was incorrect.</p>
+<p>Turns out I needed to specify the site URL in <tt class="docutils literal">pelicanconf.py</tt>:</p>
+<div class="highlight"><pre><span></span><span class="n">SITEURL</span> <span class="o">=</span> <span class="s1">&#39;https://tristianc.github.io/mt7610u</span>
+</pre></div>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html" rel="bookmark"
+                           title="Permalink to April 30, 2016">April 30, 2016</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-06-27T23:22:00-04:00">
                 Published: Mon 27 June 2016
@@ -31,16 +60,13 @@
         </address>
 <p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
 
-</footer><!-- /.post-info --><p>This article covers how the Linux USB subsystem works. The source for the mt7601u includes functions for manipulating URBs (USB request blocks): <a class="reference external" href="http://www.linuxjournal.com/article/8093">An Overview of Linux USB</a></p>
-<p>These articles cover the basics of writing a driver and includes source for a skeleton driver:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.linuxjournal.com/article/4786">How to Write a Linux USB Device Driver</a></li>
-<li><a class="reference external" href="http://www.linuxjournal.com/article/7353">Writing a Simple USB Driver</a></li>
-</ul>
-<p>This article teaches by counterexample: <a class="reference external" href="http://www.linuxjournal.com/article/8110">Driving Me Nuts - Things You Never Should Do in the Kernel</a></p>
-<p>This is informative. Not really sure how to apply any of it yet: <a class="reference external" href="http://www.linuxjournal.com/article/5442">User Mode Drivers</a></p>
-                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <p class="first last">Sites to help me get started</p>
+
+                <a class="readmore" href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
