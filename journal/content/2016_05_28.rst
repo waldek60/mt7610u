@@ -1,0 +1,25 @@
+June 1, 2016
+##############
+
+:date: 2016-07-02 21:44
+:category: mt7610u
+:slug: starting-with-probe
+:authors: Tristian Celestin
+:summary: What happens when the device gets probed?
+
+I started editing ``mt7610u_probe()`` in the mainline driver. The equivalent function in the mediatek driver is ``rtusb_probe()`` in ``usb_main_dev.c``. Both the mediatek 7610 driver and the mainlined 7601 driver call ``interface_to_usbdev()`` to get a usb_device. Then, they diverge:
+
+Mainline driver:
+================
+
+- Calls ``interface_to_usbdev()`` and produces a ``struct usb_device *``
+- Calls ``mt7601u_alloc_device() and produces a ``struct mt7601u_dev *``
+
+The function ``mt7601u_alloc_device()`` is defined in ``init.c``.
+The ``struct mt7601u_dev`` is defined in ``mt7601u.h``.
+
+Mediatek driver:
+================
+
+- Calls ``rt2870_probe()``
+

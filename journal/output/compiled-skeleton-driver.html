@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>May 3, 2016</title>
+        <link rel="stylesheet" href="https://tristianc.github.io/mt7610u/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://tristianc.github.io/mt7610u/">mt7610u Project Log </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a></li>
+                    <li><a href="https://tristianc.github.io/mt7610u/category/pelican.html">pelican</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://tristianc.github.io/mt7610u/compiled-skeleton-driver.html" rel="bookmark"
+           title="Permalink to May 3, 2016">May 3, 2016</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-07-02T21:27:00-04:00">
+                Published: Sat 02 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://tristianc.github.io/mt7610u/author/tristian-celestin.html">Tristian Celestin</a>
+        </address>
+<p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
+
+</footer><!-- /.post-info -->      <p>I copied the mt7601 driver from <a class="reference external" href="https://github.com/kuba-moo/mt7601u">here</a> to a local repo. I need <tt class="docutils literal"><span class="pre">kernel-devel</span></tt> and <tt class="docutils literal"><span class="pre">kernel-headers</span></tt> to compile the driver. I stripped out most of the source files except for <tt class="docutils literal">usb.c</tt>, <tt class="docutils literal">usb.h</tt>, and <tt class="docutils literal">mt7601.h</tt>. I kept the <cite>usb.*</cite> files because the <a class="reference external" href="https://www.kernel.org/doc/htmldocs/usb/API-module-usb-driver.html">entry point</a> for the driver is there, <tt class="docutils literal">module_usb_driver</tt>. I kept <tt class="docutils literal">mt7601.h</tt>, now renamed to <tt class="docutils literal">mt7610.h</tt>, because it seemed to define a lot of the structs and a few inline functions that are used in <tt class="docutils literal">usb.*</tt>. I also kept the <tt class="docutils literal">Makefile</tt>.</p>
+<p>When I tried to compile the skeleton, it produced nothing. This is because I needed to modify the <tt class="docutils literal">Kbuild</tt> file so that it produced an mt7610 instead of an mt7601 driver.</p>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+May 3, 2016
+##############
+
+:date: 2016-07-02 21:27
+:category: mt7610u
+:slug: compiled-skeleton-driver
+:authors: Tristian Celestin
+:summary: Managed to compile a skeleton driver
+
+I copied the mt7601 driver from `here <https://github.com/kuba-moo/mt7601u>`_ to a local repo. I need ``kernel-devel`` and ``kernel-headers`` to compile the driver. I stripped out most of the source files except for ``usb.c``, ``usb.h``, and ``mt7601.h``. I kept the `usb.*` files because the `entry point <https://www.kernel.org/doc/htmldocs/usb/API-module-usb-driver.html>`_ for the driver is there, ``module_usb_driver``. I kept ``mt7601.h``, now renamed to ``mt7610.h``, because it seemed to define a lot of the structs and a few inline functions that are used in ``usb.*``. I also kept the ``Makefile``.
+
+When I tried to compile the skeleton, it produced nothing. This is because I needed to modify the ``Kbuild`` file so that it produced an mt7610 instead of an mt7601 driver.

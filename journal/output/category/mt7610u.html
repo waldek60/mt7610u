@@ -21,7 +21,70 @@
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html">April 30, 2016</a></h1>
+                    <h1 class="entry-title"><a href="https://tristianc.github.io/mt7610u/starting-with-probe.html">June 1, 2016</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-07-02T21:44:00-04:00">
+                Published: Sat 02 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://tristianc.github.io/mt7610u/author/tristian-celestin.html">Tristian Celestin</a>
+        </address>
+<p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
+
+</footer><!-- /.post-info --><p>I started editing <tt class="docutils literal">mt7610u_probe()</tt> in the mainline driver. The equivalent function in the mediatek driver is <tt class="docutils literal">rtusb_probe()</tt> in <tt class="docutils literal">usb_main_dev.c</tt>. Both the mediatek 7610 driver and the mainlined 7601 driver call <tt class="docutils literal">interface_to_usbdev()</tt> to get a usb_device. Then, they diverge:</p>
+<div class="section" id="mainline-driver">
+<h2>Mainline driver:</h2>
+<ul class="simple">
+<li>Calls <tt class="docutils literal">interface_to_usbdev()</tt> and produces a <tt class="docutils literal">struct usb_device *</tt></li>
+<li>Calls <tt class="docutils literal">mt7601u_alloc_device() and produces a ``struct mt7601u_dev *</tt></li>
+</ul>
+<p>The function <tt class="docutils literal">mt7601u_alloc_device()</tt> is defined in <tt class="docutils literal">init.c</tt>.
+The <tt class="docutils literal">struct mt7601u_dev</tt> is defined in <tt class="docutils literal">mt7601u.h</tt>.</p>
+</div>
+<div class="section" id="mediatek-driver">
+<h2>Mediatek driver:</h2>
+<ul class="simple">
+<li>Calls <tt class="docutils literal">rt2870_probe()</tt></li>
+</ul>
+</div>
+                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tristianc.github.io/mt7610u/compiled-skeleton-driver.html" rel="bookmark"
+                           title="Permalink to May 3, 2016">May 3, 2016</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-07-02T21:27:00-04:00">
+                Published: Sat 02 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://tristianc.github.io/mt7610u/author/tristian-celestin.html">Tristian Celestin</a>
+        </address>
+<p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
+
+</footer><!-- /.post-info -->                <p class="first last">Managed to compile a skeleton driver</p>
+
+                <a class="readmore" href="https://tristianc.github.io/mt7610u/compiled-skeleton-driver.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html" rel="bookmark"
+                           title="Permalink to April 30, 2016">April 30, 2016</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2016-06-27T23:22:00-04:00">
                 Published: Mon 27 June 2016
@@ -32,16 +95,13 @@
         </address>
 <p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
 
-</footer><!-- /.post-info --><p>This article covers how the Linux USB subsystem works. The source for the mt7601u includes functions for manipulating URBs (USB request blocks): <a class="reference external" href="http://www.linuxjournal.com/article/8093">An Overview of Linux USB</a></p>
-<p>These articles cover the basics of writing a driver and includes source for a skeleton driver:</p>
-<ul class="simple">
-<li><a class="reference external" href="http://www.linuxjournal.com/article/4786">How to Write a Linux USB Device Driver</a></li>
-<li><a class="reference external" href="http://www.linuxjournal.com/article/7353">Writing a Simple USB Driver</a></li>
-</ul>
-<p>This article teaches by counterexample: <a class="reference external" href="http://www.linuxjournal.com/article/8110">Driving Me Nuts - Things You Never Should Do in the Kernel</a></p>
-<p>This is informative. Not really sure how to apply any of it yet: <a class="reference external" href="http://www.linuxjournal.com/article/5442">User Mode Drivers</a></p>
-                </article>
-            </aside><!-- /#featured -->
+</footer><!-- /.post-info -->                <p class="first last">Sites to help me get started</p>
+
+                <a class="readmore" href="https://tristianc.github.io/mt7610u/useful-beginning-sites.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
