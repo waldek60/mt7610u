@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = 'Tristian Celestin'
-SITENAME = 'mt7610u Project Journal'
+AUTHOR = u'Tristian Celestin'
+SITENAME = u'mt7610u Project Log'
 SITEURL = ''
 
 PATH = 'content'
 
 TIMEZONE = 'EST5EDT'
 
-DEFAULT_LANG = 'en'
+DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
 FEED_ALL_ATOM = None
@@ -28,7 +28,7 @@ LINKS = (('Pelican', 'http://getpelican.com/'),
 SOCIAL = (('You can add links in your config file', '#'),
           ('Another social link', '#'),)
 
-DEFAULT_PAGINATION = False
+DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
