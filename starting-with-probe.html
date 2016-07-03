@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>June 1, 2016</title>
+        <link rel="stylesheet" href="https://tristianc.github.io/mt7610u/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://tristianc.github.io/mt7610u/">mt7610u Project Log </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a></li>
+                    <li><a href="https://tristianc.github.io/mt7610u/category/pelican.html">pelican</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="https://tristianc.github.io/mt7610u/starting-with-probe.html" rel="bookmark"
+           title="Permalink to June 1, 2016">June 1, 2016</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2016-07-02T21:44:00-04:00">
+                Published: Sat 02 July 2016
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://tristianc.github.io/mt7610u/author/tristian-celestin.html">Tristian Celestin</a>
+        </address>
+<p>In <a href="https://tristianc.github.io/mt7610u/category/mt7610u.html">mt7610u</a>.</p>
+
+</footer><!-- /.post-info -->      <p>I started editing <tt class="docutils literal">mt7610u_probe()</tt> in the mainline driver. The equivalent function in the mediatek driver is <tt class="docutils literal">rtusb_probe()</tt> in <tt class="docutils literal">usb_main_dev.c</tt>. Both the mediatek 7610 driver and the mainlined 7601 driver call <tt class="docutils literal">interface_to_usbdev()</tt> to get a usb_device. Then, they diverge:</p>
+<div class="section" id="mainline-driver">
+<h2>Mainline driver:</h2>
+<ul class="simple">
+<li>Calls <tt class="docutils literal">interface_to_usbdev()</tt> and produces a <tt class="docutils literal">struct usb_device *</tt></li>
+<li>Calls <tt class="docutils literal">mt7601u_alloc_device() and produces a ``struct mt7601u_dev *</tt></li>
+</ul>
+<p>The function <tt class="docutils literal">mt7601u_alloc_device()</tt> is defined in <tt class="docutils literal">init.c</tt>.
+The <tt class="docutils literal">struct mt7601u_dev</tt> is defined in <tt class="docutils literal">mt7601u.h</tt>.</p>
+</div>
+<div class="section" id="mediatek-driver">
+<h2>Mediatek driver:</h2>
+<ul class="simple">
+<li>Calls <tt class="docutils literal">rt2870_probe()</tt></li>
+</ul>
+</div>
+
+    </div><!-- /.entry-content -->
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
