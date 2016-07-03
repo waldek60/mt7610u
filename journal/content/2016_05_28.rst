@@ -13,7 +13,7 @@ Mainline driver:
 ================
 
 - Calls ``interface_to_usbdev()`` and produces a ``struct usb_device *``
-- Calls ``mt7601u_alloc_device() and produces a ``struct mt7601u_dev *``
+- Calls ``mt7601u_alloc_device()`` and produces a ``struct mt7601u_dev *``
 
 The function ``mt7601u_alloc_device()`` is defined in ``init.c``.
 The ``struct mt7601u_dev`` is defined in ``mt7601u.h``.
